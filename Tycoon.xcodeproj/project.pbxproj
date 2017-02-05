@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DF28279F46CFB18D0AF94E3 /* Pods_TycoonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC71BD4476A6E4EF65F1A100 /* Pods_TycoonTests.framework */; };
+		781FB59D1E46E6E400042AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB59C1E46E6E400042AB1 /* AppDelegate.swift */; };
+		781FB59F1E46E6E400042AB1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB59E1E46E6E400042AB1 /* FirstViewController.swift */; };
+		781FB5A11E46E6E400042AB1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB5A01E46E6E400042AB1 /* SecondViewController.swift */; };
+		781FB5A41E46E6E400042AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781FB5A21E46E6E400042AB1 /* Main.storyboard */; };
+		781FB5A61E46E6E400042AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781FB5A51E46E6E400042AB1 /* Assets.xcassets */; };
+		781FB5A91E46E6E400042AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781FB5A71E46E6E400042AB1 /* LaunchScreen.storyboard */; };
+		781FB5B41E46E6E400042AB1 /* TycoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB5B31E46E6E400042AB1 /* TycoonTests.swift */; };
+		BB9D5B32AAAED28707B906F5 /* Pods_Tycoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6135FCDFE085A743A5CCED6D /* Pods_Tycoon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		781FB5B01E46E6E400042AB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 781FB5911E46E6E400042AB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 781FB5981E46E6E400042AB1;
+			remoteInfo = Tycoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		545E3F197C32C8617B55C3A7 /* Pods-TycoonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TycoonTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TycoonTests/Pods-TycoonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6135FCDFE085A743A5CCED6D /* Pods_Tycoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tycoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72EDBCC82D93E44C39A32725 /* Pods-Tycoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tycoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tycoon/Pods-Tycoon.release.xcconfig"; sourceTree = "<group>"; };
+		781FB5991E46E6E400042AB1 /* Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tycoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		781FB59C1E46E6E400042AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		781FB59E1E46E6E400042AB1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		781FB5A01E46E6E400042AB1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		781FB5A31E46E6E400042AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		781FB5A51E46E6E400042AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		781FB5A81E46E6E400042AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		781FB5AA1E46E6E400042AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		781FB5AF1E46E6E400042AB1 /* TycoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TycoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		781FB5B31E46E6E400042AB1 /* TycoonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TycoonTests.swift; sourceTree = "<group>"; };
+		781FB5B51E46E6E400042AB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8D0D2B81610051B698858F8 /* Pods-Tycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tycoon/Pods-Tycoon.debug.xcconfig"; sourceTree = "<group>"; };
+		B8486DB3F101F87DB168B75A /* Pods-TycoonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TycoonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TycoonTests/Pods-TycoonTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC71BD4476A6E4EF65F1A100 /* Pods_TycoonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TycoonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		781FB5961E46E6E400042AB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB9D5B32AAAED28707B906F5 /* Pods_Tycoon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781FB5AC1E46E6E400042AB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF28279F46CFB18D0AF94E3 /* Pods_TycoonTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		476825293D9AADA28F85B722 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6135FCDFE085A743A5CCED6D /* Pods_Tycoon.framework */,
+				EC71BD4476A6E4EF65F1A100 /* Pods_TycoonTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		690E98EBD522B2A9601B948C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8D0D2B81610051B698858F8 /* Pods-Tycoon.debug.xcconfig */,
+				72EDBCC82D93E44C39A32725 /* Pods-Tycoon.release.xcconfig */,
+				545E3F197C32C8617B55C3A7 /* Pods-TycoonTests.debug.xcconfig */,
+				B8486DB3F101F87DB168B75A /* Pods-TycoonTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		781FB5901E46E6E400042AB1 = {
+			isa = PBXGroup;
+			children = (
+				781FB59B1E46E6E400042AB1 /* Tycoon */,
+				781FB5B21E46E6E400042AB1 /* TycoonTests */,
+				781FB59A1E46E6E400042AB1 /* Products */,
+				690E98EBD522B2A9601B948C /* Pods */,
+				476825293D9AADA28F85B722 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		781FB59A1E46E6E400042AB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				781FB5991E46E6E400042AB1 /* Tycoon.app */,
+				781FB5AF1E46E6E400042AB1 /* TycoonTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		781FB59B1E46E6E400042AB1 /* Tycoon */ = {
+			isa = PBXGroup;
+			children = (
+				781FB59C1E46E6E400042AB1 /* AppDelegate.swift */,
+				781FB59E1E46E6E400042AB1 /* FirstViewController.swift */,
+				781FB5A01E46E6E400042AB1 /* SecondViewController.swift */,
+				781FB5A21E46E6E400042AB1 /* Main.storyboard */,
+				781FB5A51E46E6E400042AB1 /* Assets.xcassets */,
+				781FB5A71E46E6E400042AB1 /* LaunchScreen.storyboard */,
+				781FB5AA1E46E6E400042AB1 /* Info.plist */,
+			);
+			path = Tycoon;
+			sourceTree = "<group>";
+		};
+		781FB5B21E46E6E400042AB1 /* TycoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				781FB5B31E46E6E400042AB1 /* TycoonTests.swift */,
+				781FB5B51E46E6E400042AB1 /* Info.plist */,
+			);
+			path = TycoonTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		781FB5981E46E6E400042AB1 /* Tycoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781FB5B81E46E6E400042AB1 /* Build configuration list for PBXNativeTarget "Tycoon" */;
+			buildPhases = (
+				5C1029BCCE728C3F44C36BFF /* [CP] Check Pods Manifest.lock */,
+				781FB5951E46E6E400042AB1 /* Sources */,
+				781FB5961E46E6E400042AB1 /* Frameworks */,
+				781FB5971E46E6E400042AB1 /* Resources */,
+				42F967BA6018E8B9F76A1DE0 /* [CP] Embed Pods Frameworks */,
+				968C6329A1EDE3BA487A7226 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tycoon;
+			productName = Tycoon;
+			productReference = 781FB5991E46E6E400042AB1 /* Tycoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		781FB5AE1E46E6E400042AB1 /* TycoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 781FB5BB1E46E6E400042AB1 /* Build configuration list for PBXNativeTarget "TycoonTests" */;
+			buildPhases = (
+				E097B9F702BD9AF1754EFE4B /* [CP] Check Pods Manifest.lock */,
+				781FB5AB1E46E6E400042AB1 /* Sources */,
+				781FB5AC1E46E6E400042AB1 /* Frameworks */,
+				781FB5AD1E46E6E400042AB1 /* Resources */,
+				2EAB316DB3BC868D4240E4CE /* [CP] Embed Pods Frameworks */,
+				956ECCE170327E08F6047ABA /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				781FB5B11E46E6E400042AB1 /* PBXTargetDependency */,
+			);
+			name = TycoonTests;
+			productName = TycoonTests;
+			productReference = 781FB5AF1E46E6E400042AB1 /* TycoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		781FB5911E46E6E400042AB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Isaac Overacker";
+				TargetAttributes = {
+					781FB5981E46E6E400042AB1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4E7457U38;
+						ProvisioningStyle = Automatic;
+					};
+					781FB5AE1E46E6E400042AB1 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4E7457U38;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 781FB5981E46E6E400042AB1;
+					};
+				};
+			};
+			buildConfigurationList = 781FB5941E46E6E400042AB1 /* Build configuration list for PBXProject "Tycoon" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 781FB5901E46E6E400042AB1;
+			productRefGroup = 781FB59A1E46E6E400042AB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				781FB5981E46E6E400042AB1 /* Tycoon */,
+				781FB5AE1E46E6E400042AB1 /* TycoonTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		781FB5971E46E6E400042AB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781FB5A91E46E6E400042AB1 /* LaunchScreen.storyboard in Resources */,
+				781FB5A61E46E6E400042AB1 /* Assets.xcassets in Resources */,
+				781FB5A41E46E6E400042AB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781FB5AD1E46E6E400042AB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2EAB316DB3BC868D4240E4CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TycoonTests/Pods-TycoonTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42F967BA6018E8B9F76A1DE0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tycoon/Pods-Tycoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C1029BCCE728C3F44C36BFF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		956ECCE170327E08F6047ABA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TycoonTests/Pods-TycoonTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		968C6329A1EDE3BA487A7226 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tycoon/Pods-Tycoon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E097B9F702BD9AF1754EFE4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		781FB5951E46E6E400042AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781FB5A11E46E6E400042AB1 /* SecondViewController.swift in Sources */,
+				781FB59D1E46E6E400042AB1 /* AppDelegate.swift in Sources */,
+				781FB59F1E46E6E400042AB1 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		781FB5AB1E46E6E400042AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				781FB5B41E46E6E400042AB1 /* TycoonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		781FB5B11E46E6E400042AB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 781FB5981E46E6E400042AB1 /* Tycoon */;
+			targetProxy = 781FB5B01E46E6E400042AB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		781FB5A21E46E6E400042AB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				781FB5A31E46E6E400042AB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		781FB5A71E46E6E400042AB1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				781FB5A81E46E6E400042AB1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		781FB5B61E46E6E400042AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		781FB5B71E46E6E400042AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		781FB5B91E46E6E400042AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D0D2B81610051B698858F8 /* Pods-Tycoon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4E7457U38;
+				INFOPLIST_FILE = Tycoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.Tycoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		781FB5BA1E46E6E400042AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72EDBCC82D93E44C39A32725 /* Pods-Tycoon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4E7457U38;
+				INFOPLIST_FILE = Tycoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.Tycoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		781FB5BC1E46E6E400042AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 545E3F197C32C8617B55C3A7 /* Pods-TycoonTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N4E7457U38;
+				INFOPLIST_FILE = TycoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.TycoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tycoon.app/Tycoon";
+			};
+			name = Debug;
+		};
+		781FB5BD1E46E6E400042AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8486DB3F101F87DB168B75A /* Pods-TycoonTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = N4E7457U38;
+				INFOPLIST_FILE = TycoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = me.overacker.TycoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tycoon.app/Tycoon";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		781FB5941E46E6E400042AB1 /* Build configuration list for PBXProject "Tycoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781FB5B61E46E6E400042AB1 /* Debug */,
+				781FB5B71E46E6E400042AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		781FB5B81E46E6E400042AB1 /* Build configuration list for PBXNativeTarget "Tycoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781FB5B91E46E6E400042AB1 /* Debug */,
+				781FB5BA1E46E6E400042AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		781FB5BB1E46E6E400042AB1 /* Build configuration list for PBXNativeTarget "TycoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				781FB5BC1E46E6E400042AB1 /* Debug */,
+				781FB5BD1E46E6E400042AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 781FB5911E46E6E400042AB1 /* Project object */;
+}
