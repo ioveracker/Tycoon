@@ -1,4 +1,5 @@
 PODS:
+  - Eureka (2.0.0-beta.1)
   - Nimble (5.1.1)
   - Quick (1.0.0)
   - Realm (2.2.0):
@@ -8,16 +9,18 @@ PODS:
     - Realm (= 2.2.0)
 
 DEPENDENCIES:
+  - Eureka (= 2.0.0-beta.1)
   - Nimble
   - Quick
   - RealmSwift
 
 SPEC CHECKSUMS:
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   Nimble: 415e3aa3267e7bc2c96b05fa814ddea7bb686a29
   Quick: 8024e4a47e6cc03a9d5245ef0948264fc6d27cff
   Realm: d95b8fb34c83f1e764b66d319277a62c2b6e4bf5
   RealmSwift: a4fa52d06e946a32ec746b3388374f742e6b8731
 
-PODFILE CHECKSUM: c3f1425b337e8f20f0617a954f2805deaafe106f
+PODFILE CHECKSUM: d9bf505a6dfc7a13f45a26bceeb8f24269269dde
 
 COCOAPODS: 1.2.0
