@@ -84,6 +84,7 @@
                                     <outlet property="descriptionLabel" destination="wJy-UM-ren" id="Vuy-jY-kAz"/>
                                     <outlet property="moneyLabel" destination="DLW-BC-9Xj" id="gUa-n3-bCO"/>
                                     <outlet property="picture" destination="pht-pu-eWe" id="t6Y-9d-X31"/>
+                                    <segue destination="qAr-8I-kep" kind="presentation" identifier="ShowItem" id="9T1-fE-QTR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -95,7 +96,7 @@
                     <navigationItem key="navigationItem" title="Items" id="YiJ-Z6-UQ8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyh-4f-Nc0">
                             <connections>
-                                <segue destination="qAr-8I-kep" kind="presentation" id="xQZ-Oi-cou"/>
+                                <segue destination="qAr-8I-kep" kind="presentation" identifier="AddItem" id="xQZ-Oi-cou"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -118,7 +119,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bXW-oz-LXo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2494" y="-766"/>
+            <point key="canvasLocation" x="2505" y="-322"/>
         </scene>
         <!--New Item-->
         <scene sceneID="kw5-Ka-aUZ">
@@ -143,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p28-98-x0k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3214" y="-766"/>
+            <point key="canvasLocation" x="3225" y="-322"/>
         </scene>
         <!--Items-->
         <scene sceneID="HiQ-OB-L0j">
@@ -185,4 +186,7 @@
     <resources>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9T1-fE-QTR"/>
+    </inferredMetricsTieBreakers>
 </document>

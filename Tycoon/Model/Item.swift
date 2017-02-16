@@ -10,25 +10,39 @@ import RealmSwift
 
 class Item: Object {
 
+    dynamic var id = UUID().uuidString
     dynamic var itemDescription = ""
     dynamic var brand = ""
 //    var photo
     dynamic var size = ""
-    dynamic var cost: Double = 0.0
-    dynamic var listPrice: Double = 0.0
-    dynamic var shippingCost: Double = 0.0
-    dynamic var suppliesCost: Double = 0.0
-//    var materials = List<Material>()
+
+    let cost = RealmOptional<Double>()
+    let listPrice = RealmOptional<Double>()
+    let shippingCost = RealmOptional<Double>()
+    let suppliesCost = RealmOptional<Double>()
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 
     var profit: Double {
-        return listPrice - cost - shippingCost - suppliesCost // materials.reduce(0, { $0 + $1.cost })
+        return
+            listPrice.valueOrZero
+            - cost.valueOrZero
+            - shippingCost.valueOrZero
+            - suppliesCost.valueOrZero
     }
     
 }
 
-//class Material: Object {
-//
-//    var name = ""
-//    var cost: Double = 0.0
-//
-//}
+extension RealmOptional {
+
+    var valueOrZero: Double {
+        if let double = value as? Double {
+            return double
+        }
+
+        return 0.0
+    }
+
+}

@@ -21,6 +21,25 @@ class ItemsTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+
+        guard let identifier = segue.identifier else {
+            return
+        }
+
+        if identifier == "ShowItem" {
+            guard let nav = segue.destination as? UINavigationController,
+                  let itemViewController = nav.viewControllers.first as? NewItemViewController else {
+                return
+            }
+
+            if let row = tableView.indexPathForSelectedRow?.row {
+                itemViewController.item = items[row]
+            }
+        }
+    }
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -40,7 +59,7 @@ class ItemsTableViewController: UITableViewController {
             itemCell.descriptionLabel.text = item.itemDescription
             itemCell.moneyLabel.text = String(
                 format: "$%.02f",
-                arguments: [item.listPrice])
+                arguments: [item.listPrice.valueOrZero])
         }
     }
 
