@@ -147,6 +147,32 @@ class NewItemViewController: FormViewController {
 
                 self.dismiss()
             }
+        +++ Section()
+            <<< ButtonRow() { row in
+                row.title = "Delete"
+                row.cell.tintColor = UIColor.red
+                row.hidden = Condition.function([]) { _ in
+                    self.item == nil
+                }
+            }.onCellSelection() { (cell, row) in
+                let alert = UIAlertController(
+                    title: "Do you want to delete this item?",
+                    message: nil,
+                    preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { _ in
+                    if let item = self.item {
+                        let realm = try! Realm()
+                        try! realm.write {
+                            realm.delete(item)
+                        }
+                    }
+                    self.dismiss()
+                })
+
+                alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+
+                self.present(alert, animated: true, completion: nil)
+            }
     }
 
 }
