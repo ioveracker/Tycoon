@@ -15,6 +15,7 @@ class Item: Object {
     dynamic var brand = ""
 //    var photo
     dynamic var size = ""
+    dynamic var sold = false
 
     let cost = RealmOptional<Double>()
     let listPrice = RealmOptional<Double>()

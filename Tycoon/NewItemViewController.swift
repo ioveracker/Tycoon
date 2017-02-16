@@ -3,11 +3,7 @@ import RealmSwift
 
 class NewItemViewController: FormViewController {
 
-    var item: Item? {
-        didSet {
-            print("set item")
-        }
-    }
+    var item: Item?
 
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         dismiss()
@@ -21,6 +17,7 @@ class NewItemViewController: FormViewController {
         static let listPrice = "listPrice"
         static let shippingCost = "shippingCost"
         static let suppliesCost = "suppliesCost"
+        static let sold = "sold"
     }
 
     override func viewDidLoad() {
@@ -96,6 +93,25 @@ class NewItemViewController: FormViewController {
                     row.value = value
                 }
             }
+            <<< SwitchRow() { row in
+                row.title = "Sold?"
+                row.tag = RowTags.sold
+
+                if let item = item {
+                    row.value = item.sold
+                }
+            }
+            <<< LabelRow() { row in
+                row.title = "Profit"
+
+                if let item = item {
+                    row.value = String(format: "$%.02f", arguments: [item.profit])
+                }
+
+                row.hidden = Condition.function([RowTags.sold]) { form in
+                    return !((form.rowBy(tag: RowTags.sold) as? SwitchRow)?.value ?? false)
+                }
+            }
         +++ Section()
             <<< ButtonRow() { row in
                 row.title = item == nil ? "Add" : "Save"
@@ -121,7 +137,6 @@ class NewItemViewController: FormViewController {
                         item.size = value
                     }
 
-
                     if let row = form.rowBy(tag: RowTags.cost) as? DecimalRow,
                         let value = row.value {
                         item.cost.value = value
@@ -140,6 +155,11 @@ class NewItemViewController: FormViewController {
                     if let row = form.rowBy(tag: RowTags.suppliesCost) as? DecimalRow,
                         let value = row.value {
                         item.suppliesCost.value = value
+                    }
+
+                    if let row = form.rowBy(tag: RowTags.sold) as? SwitchRow,
+                        let value = row.value {
+                        item.sold = value
                     }
 
                     realm.add(item, update: self.item != nil)
