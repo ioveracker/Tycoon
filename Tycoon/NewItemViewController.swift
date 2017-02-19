@@ -10,11 +10,12 @@ class NewItemViewController: FormViewController {
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         // Only delete the item on cancel if this is the first time the item is being added, not
         // when it is being edited.
-//        if let realm = item.realm {
-//            try! realm.write {
-//                realm.delete(item)
-//            }
-//        }
+        if !editingItem, let realm = item.realm {
+            try! realm.write {
+                realm.delete(item)
+            }
+        }
+
         dismiss()
     }
 
@@ -54,14 +55,11 @@ class NewItemViewController: FormViewController {
                     row.value = item.itemDescription
                 }
             }.onChange { row in
-                print("desc change")
                 if let value = row.value {
-                    print("desc value = \(value)")
                     let realm = try! Realm()
                     try! realm.write {
                         realm.add(self.item, update: true)
                         self.item.itemDescription = value
-                        print("wrote to realm")
                     }
                 }
             }
@@ -212,7 +210,7 @@ class NewItemViewController: FormViewController {
                 row.tag = "delete"
 
                 row.hidden = Condition.function([]) { form in
-                    return self.item.realm == nil
+                    return !self.editingItem
                 }
             }.onCellSelection() { (cell, row) in
                 let alert = UIAlertController(
@@ -243,8 +241,6 @@ class NewItemViewController: FormViewController {
             if self.item.isInvalidated {
                 return
             }
-
-            print("items: \(try! Realm().objects(Item.self))")
 
             DispatchQueue.main.async {
                 if let profitRow = self.form.rowBy(tag: RowTags.profit) as? LabelRow {
