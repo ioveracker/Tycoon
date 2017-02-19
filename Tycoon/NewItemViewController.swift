@@ -93,10 +93,9 @@ class NewItemViewController: FormViewController {
                     }
                 }
             }
-            <<< DateRow() { row in
+            <<< DateInlineRow() { row in
                 row.title = "Date Listed"
                 row.tag = RowTags.dateListed
-
                 row.value = item.dateListed
             }.onChange { row in
                 if let value = row.value {
