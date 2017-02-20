@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="375" id="L7E-qH-3mE" customClass="ItemImageCell" customModule="Tycoon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L7E-qH-3mE" id="AHt-RS-PZd">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="374"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bsE-E0-ysw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="374.5"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to add a photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ES7-so-Oii">
+                        <rect key="frame" x="115" y="177" width="144" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bsE-E0-ysw" firstAttribute="top" secondItem="AHt-RS-PZd" secondAttribute="top" id="BgA-6Q-Zeo"/>
+                    <constraint firstItem="ES7-so-Oii" firstAttribute="centerY" secondItem="bsE-E0-ysw" secondAttribute="centerY" id="MyG-qg-Szz"/>
+                    <constraint firstAttribute="trailing" secondItem="bsE-E0-ysw" secondAttribute="trailing" id="NvJ-dg-d2j"/>
+                    <constraint firstItem="bsE-E0-ysw" firstAttribute="leading" secondItem="AHt-RS-PZd" secondAttribute="leading" id="PDj-9j-NWW"/>
+                    <constraint firstItem="ES7-so-Oii" firstAttribute="centerX" secondItem="bsE-E0-ysw" secondAttribute="centerX" id="nKp-2X-l9N"/>
+                    <constraint firstAttribute="bottom" secondItem="bsE-E0-ysw" secondAttribute="bottom" id="pr0-i9-RgD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="itemImageView" destination="bsE-E0-ysw" id="S02-PB-6Ob"/>
+                <outlet property="tapToAddPhotoLabel" destination="ES7-so-Oii" id="KTg-Kb-RrQ"/>
+            </connections>
+            <point key="canvasLocation" x="-267" y="-61"/>
+        </tableViewCell>
+    </objects>
+</document>

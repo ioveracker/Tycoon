@@ -10,10 +10,8 @@ class NewItemViewController: FormViewController {
     @IBAction func cancelButtonTapped(_ sender: UIBarButtonItem) {
         // Only delete the item on cancel if this is the first time the item is being added, not
         // when it is being edited.
-        if !editingItem, let realm = item.realm {
-            try! realm.write {
-                realm.delete(item)
-            }
+        if !editingItem {
+            item.delete()
         }
 
         dismiss()
@@ -42,9 +40,41 @@ class NewItemViewController: FormViewController {
             title = "Edit Item"
         } else {
             item = Item()
+
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(item)
+            }
         }
 
         form
+        +++ Section("Image")
+            <<< ItemImageRow() { row in
+                }.onCellSelection() { cell, row in
+                    let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.allowsEditing = true
+
+                    alert.addAction(UIAlertAction(title: "Take New Photo", style: .default) { _ in
+                        imagePicker.sourceType = .camera
+                        imagePicker.cameraCaptureMode = .photo
+                        self.present(imagePicker, animated: true)
+                    })
+
+                    alert.addAction(UIAlertAction(title: "Choose From Camera Roll", style: .default) { _ in
+                        imagePicker.sourceType = .photoLibrary
+                        self.present(imagePicker, animated: true)
+                    })
+
+                    alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
+                    self.present(alert, animated: true)
+                }.cellUpdate() { cell, row in
+                    cell.itemImageView.image = UIImage(contentsOfFile: self.item.imagePath)
+                    cell.tapToAddPhotoLabel.isHidden = cell.itemImageView.image != nil
+            }
         +++ Section("Item Details")
             <<< TextRow() { row in
                 row.title = "Description"
@@ -58,7 +88,6 @@ class NewItemViewController: FormViewController {
                 if let value = row.value {
                     let realm = try! Realm()
                     try! realm.write {
-                        realm.add(self.item, update: true)
                         self.item.itemDescription = value
                     }
                 }
@@ -220,12 +249,7 @@ class NewItemViewController: FormViewController {
                 alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
 
                 alert.addAction(UIAlertAction(title: "Yes", style: .destructive) { _ in
-                    if let item = self.item {
-                        let realm = try! Realm()
-                        try! realm.write {
-                            realm.delete(item)
-                        }
-                    }
+                    self.item.delete()
                     self.dismiss()
                 })
 
@@ -265,6 +289,31 @@ class NewItemViewController: FormViewController {
         notificationToken?.stop()
         notificationToken = nil
         super.viewWillDisappear(animated)
+    }
+
+}
+
+extension NewItemViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        var imageMaybe: UIImage?
+        if let editedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            imageMaybe = editedImage
+        } else if let originalImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageMaybe = originalImage
+        }
+
+        guard let image = imageMaybe else {
+            return
+        }
+
+        try! UIImagePNGRepresentation(image)?.write(to: item.imageURL, options: .atomic)
+
+        dismiss(animated: true)
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
     }
 
 }

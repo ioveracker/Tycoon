@@ -13,7 +13,6 @@ class Item: Object {
     dynamic var id = UUID().uuidString
     dynamic var itemDescription = ""
     dynamic var brand = ""
-//    var photo
     dynamic var size = ""
     dynamic var dateListed = Date()
     dynamic var sold = false
@@ -55,7 +54,46 @@ class Item: Object {
             (cost.valueOrZero + shippingCost.valueOrZero + suppliesCost.valueOrZero)
             / (1 - 0.18)
     }
-    
+
+    var imagePath: String {
+        return "\(getImagesDirectory())/\(id).png"
+    }
+
+    var imageURL: URL {
+        return URL(fileURLWithPath: imagePath)
+    }
+
+    func delete() {
+        if let realm = self.realm {
+            if FileManager.default.fileExists(atPath: imagePath) {
+                try! FileManager.default.removeItem(atPath: imagePath)
+            }
+
+            try! realm.write {
+                realm.delete(self)
+            }
+        }
+    }
+
+}
+
+// MARK: Private
+fileprivate extension Item {
+
+    fileprivate func getImagesDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let imagesDirectory = "\(paths.first!)/Images"
+        let imagesURL = URL(fileURLWithPath: imagesDirectory)
+
+        if !FileManager.default.fileExists(atPath: imagesDirectory) {
+            try! FileManager.default.createDirectory(at: imagesURL,
+                                                     withIntermediateDirectories: true,
+                                                     attributes: nil)
+        }
+
+        return imagesDirectory
+    }
+
 }
 
 extension RealmOptional {

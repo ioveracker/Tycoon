@@ -60,6 +60,7 @@ class ItemsTableViewController: UITableViewController {
             itemCell.moneyLabel.text = String(
                 format: "$%.02f",
                 arguments: [item.listPrice.valueOrZero])
+            itemCell.picture.image = UIImage(contentsOfFile: item.imagePath)
         }
     }
 

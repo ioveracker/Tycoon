@@ -19,6 +19,8 @@
 		785316901E5237280042D248 /* NewItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7853168F1E5237280042D248 /* NewItemViewController.swift */; };
 		787B8C671E541AFE00F3FE4E /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B8C661E541AFE00F3FE4E /* ItemsTableViewController.swift */; };
 		787B8C691E541BF900F3FE4E /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787B8C681E541BF900F3FE4E /* ItemCell.swift */; };
+		78D630D11E59FFF8003DBA33 /* ItemImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78D630D01E59FFF8003DBA33 /* ItemImageCell.xib */; };
+		78D630D31E5A4DE1003DBA33 /* ItemImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D630D21E5A4DE1003DBA33 /* ItemImageCell.swift */; };
 		BB9D5B32AAAED28707B906F5 /* Pods_Tycoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6135FCDFE085A743A5CCED6D /* Pods_Tycoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		7853168F1E5237280042D248 /* NewItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewItemViewController.swift; sourceTree = "<group>"; };
 		787B8C661E541AFE00F3FE4E /* ItemsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsTableViewController.swift; sourceTree = "<group>"; };
 		787B8C681E541BF900F3FE4E /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		78D630D01E59FFF8003DBA33 /* ItemImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemImageCell.xib; sourceTree = "<group>"; };
+		78D630D21E5A4DE1003DBA33 /* ItemImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemImageCell.swift; sourceTree = "<group>"; };
 		A8D0D2B81610051B698858F8 /* Pods-Tycoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tycoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tycoon/Pods-Tycoon.debug.xcconfig"; sourceTree = "<group>"; };
 		B8486DB3F101F87DB168B75A /* Pods-TycoonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TycoonTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TycoonTests/Pods-TycoonTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC71BD4476A6E4EF65F1A100 /* Pods_TycoonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TycoonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,6 +134,8 @@
 				7853168F1E5237280042D248 /* NewItemViewController.swift */,
 				787B8C661E541AFE00F3FE4E /* ItemsTableViewController.swift */,
 				787B8C681E541BF900F3FE4E /* ItemCell.swift */,
+				78D630D01E59FFF8003DBA33 /* ItemImageCell.xib */,
+				78D630D21E5A4DE1003DBA33 /* ItemImageCell.swift */,
 			);
 			path = Tycoon;
 			sourceTree = "<group>";
@@ -250,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D630D11E59FFF8003DBA33 /* ItemImageCell.xib in Resources */,
 				781FB5A91E46E6E400042AB1 /* LaunchScreen.storyboard in Resources */,
 				781FB5A61E46E6E400042AB1 /* Assets.xcassets in Resources */,
 				781FB5A41E46E6E400042AB1 /* Main.storyboard in Resources */,
@@ -363,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D630D31E5A4DE1003DBA33 /* ItemImageCell.swift in Sources */,
 				781FB5C21E47F00800042AB1 /* Item.swift in Sources */,
 				781FB5A11E46E6E400042AB1 /* SecondViewController.swift in Sources */,
 				787B8C671E541AFE00F3FE4E /* ItemsTableViewController.swift in Sources */,

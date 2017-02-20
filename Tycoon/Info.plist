@@ -51,5 +51,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Give $(PRODUCT_NAME) access to your photo library so you can attach images to items.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Give $(PRODUCT_NAME) access to your camera so you can take new pictures to attach to your items.</string>
 </dict>
 </plist>
