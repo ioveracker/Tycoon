@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		5DF28279F46CFB18D0AF94E3 /* Pods_TycoonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC71BD4476A6E4EF65F1A100 /* Pods_TycoonTests.framework */; };
 		781FB59D1E46E6E400042AB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB59C1E46E6E400042AB1 /* AppDelegate.swift */; };
-		781FB59F1E46E6E400042AB1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB59E1E46E6E400042AB1 /* FirstViewController.swift */; };
-		781FB5A11E46E6E400042AB1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB5A01E46E6E400042AB1 /* SecondViewController.swift */; };
+		781FB5A11E46E6E400042AB1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781FB5A01E46E6E400042AB1 /* SettingsViewController.swift */; };
 		781FB5A41E46E6E400042AB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781FB5A21E46E6E400042AB1 /* Main.storyboard */; };
 		781FB5A61E46E6E400042AB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 781FB5A51E46E6E400042AB1 /* Assets.xcassets */; };
 		781FB5A91E46E6E400042AB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 781FB5A71E46E6E400042AB1 /* LaunchScreen.storyboard */; };
@@ -40,8 +39,7 @@
 		72EDBCC82D93E44C39A32725 /* Pods-Tycoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tycoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tycoon/Pods-Tycoon.release.xcconfig"; sourceTree = "<group>"; };
 		781FB5991E46E6E400042AB1 /* Tycoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tycoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		781FB59C1E46E6E400042AB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		781FB59E1E46E6E400042AB1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		781FB5A01E46E6E400042AB1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		781FB5A01E46E6E400042AB1 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		781FB5A31E46E6E400042AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		781FB5A51E46E6E400042AB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		781FB5A81E46E6E400042AB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -125,8 +123,7 @@
 			children = (
 				781FB5BE1E47EFE000042AB1 /* Model */,
 				781FB59C1E46E6E400042AB1 /* AppDelegate.swift */,
-				781FB59E1E46E6E400042AB1 /* FirstViewController.swift */,
-				781FB5A01E46E6E400042AB1 /* SecondViewController.swift */,
+				781FB5A01E46E6E400042AB1 /* SettingsViewController.swift */,
 				781FB5A21E46E6E400042AB1 /* Main.storyboard */,
 				781FB5A51E46E6E400042AB1 /* Assets.xcassets */,
 				781FB5A71E46E6E400042AB1 /* LaunchScreen.storyboard */,
@@ -178,6 +175,7 @@
 				781FB5971E46E6E400042AB1 /* Resources */,
 				42F967BA6018E8B9F76A1DE0 /* [CP] Embed Pods Frameworks */,
 				968C6329A1EDE3BA487A7226 /* [CP] Copy Pods Resources */,
+				78D630D51E5AB02E003DBA33 /* Increment Build Number */,
 			);
 			buildRules = (
 			);
@@ -318,6 +316,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		78D630D51E5AB02E003DBA33 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "\"${SRCROOT}/Scripts/increment-build-number.sh\"";
+		};
 		956ECCE170327E08F6047ABA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -372,12 +384,11 @@
 			files = (
 				78D630D31E5A4DE1003DBA33 /* ItemImageCell.swift in Sources */,
 				781FB5C21E47F00800042AB1 /* Item.swift in Sources */,
-				781FB5A11E46E6E400042AB1 /* SecondViewController.swift in Sources */,
+				781FB5A11E46E6E400042AB1 /* SettingsViewController.swift in Sources */,
 				787B8C671E541AFE00F3FE4E /* ItemsTableViewController.swift in Sources */,
 				785316901E5237280042D248 /* NewItemViewController.swift in Sources */,
 				787B8C691E541BF900F3FE4E /* ItemCell.swift in Sources */,
 				781FB59D1E46E6E400042AB1 /* AppDelegate.swift in Sources */,
-				781FB59F1E46E6E400042AB1 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

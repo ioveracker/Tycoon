@@ -14,7 +14,7 @@
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Tycoon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="SettingsViewController" customModule="Tycoon" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -24,19 +24,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚧 Under Construction 🚧" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxE-l3-qoK">
-                                <rect key="frame" x="84.5" y="323" width="205.5" height="21"/>
+                                <rect key="frame" x="84" y="323" width="206" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 1.2.3 (42)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAj-1I-Fw7">
+                                <rect key="frame" x="16" y="589" width="343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="frR-YV-Yew"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zAj-1I-Fw7" secondAttribute="trailing" id="CTh-iM-Fqq"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zAj-1I-Fw7" secondAttribute="bottom" constant="8" id="JWQ-JA-veB"/>
                             <constraint firstItem="mxE-l3-qoK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="l14-v6-aFa"/>
                             <constraint firstItem="mxE-l3-qoK" firstAttribute="centerY" secondItem="QS5-Rx-YEW" secondAttribute="centerY" id="r2e-Za-KYg"/>
+                            <constraint firstItem="zAj-1I-Fw7" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="zaQ-fq-Wcr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="ic_settings" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="versionLabel" destination="zAj-1I-Fw7" id="gLp-aZ-ofF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
